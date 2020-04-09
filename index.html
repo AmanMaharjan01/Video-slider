@@ -3,7 +3,11 @@
 <head>
 	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Video Slider</title>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src= "https://code.jquery.com/jquery-3.4.1.min.js"> </script>
+	 <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> 
 </head>
 <body>
 	<section>
@@ -17,11 +21,28 @@
 			<li onclick="videoUrl('Videos/video4.mp4')"><img src="img/thumb4.png"></li>
 		</ul>
 	</section>
+	<div class="button">
+			<button id="play" onclick="playVideo()">
+             <i class="far fa-play-circle"></i> Play
+            </button>       
+            <button id="pause" onclick="pauseVideo()"> 
+            <i class="far fa-pause-circle"></i> Pause
+            </button> 
+		</div>
 	<script>
 		function videoUrl(video)
 		{
 			document.getElementById("slider").src = video;
 		}
+		 function playVideo() { 
+
+            $('#slider').trigger('play'); 
+           
+        } 
+        function pauseVideo() { 
+            $('#slider').trigger('pause'); 
+            
+        } 
 	</script>
 </body>
 </html>

@@ -54,3 +54,26 @@ section .navigation li img:hover
 {
 	width: 200px;
 }
+
+.button
+{
+	position: absolute;
+	top: 2%;
+	left: 1%;
+}
+.button button
+{
+	width: 75px;
+    height: 45px;
+    background-color: #113481;
+    color: white;
+    border: 1px solid #113481;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.button button:hover
+{
+	border: 1px solid #264b99;
+	background-color: #264b99;
+}
